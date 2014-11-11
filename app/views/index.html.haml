@@ -3,6 +3,37 @@
   %small
     Up, Up, and Away!
 .hr
+%p.lead
+  Welcome to the online sign-up sheets for the famous Sequoia Community Parties and the fabulous Sequoia Community fixed- price Goods and Services! 
+.container
+  .row
+    .col-md-2
+    .col-md-6
+      %p.block
+        This website will be active starting at 
+        %strong
+          %em
+            4pm on Tuesday, November 11th 
+        and will close at 
+        %strong
+          %em
+            10pm on Thursday, November 13th. 
+  .row
+    .col-md-2
+    .col-md-6
+      %p.block
+        Click on a title below to see a full description of the item, its cost, and its scheduled date and time. If you decide to purchase the item, enter your name, email and click 'Sign Up'. The cost of the item will be added to your bill and will be paid for at check-out on the night of the Auction. 
+  .row
+    .col-md-2
+    .col-md-6
+      %p.block
+        Please double check your calendars before purchasing a party, as we cannot refund payment for scheduling conflicts. 
+  .row
+    .col-md-2
+    .col-md-6
+      %p.block
+        Any items that still have open slots will be posted and available for purchase on the night of the Auction. Some parties will sell out before the Auction though, so make sure you don't miss out!
+.hr
 .parties
   -parties.each do |p|
     %a.item{href:"#{url_for "/party/#{p.id}"}"}
