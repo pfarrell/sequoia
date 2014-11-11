@@ -57,7 +57,7 @@
         =p.slots - p.signups.size
         remaining)
   -goods.each do |g|
-    %a.item{href:"#{url_for "/good/#{g.id}"}"}
+    %a.item{href:"#{url_for "/good/#{g.id}"}", class: ('full' if g.slots - g.signups.size == 0)}
       .title
         =g.title
       .donor
