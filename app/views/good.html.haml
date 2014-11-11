@@ -1,0 +1,14 @@
+.title
+  =good.title
+.donor
+  =good.donor
+.description
+  =good.description
+.price
+  =good.price
+.available
+  =good.slots - good.signups.size
+.signups
+  -good.signups.each do |signup|
+    .name
+      =signup.name

@@ -5,12 +5,17 @@
 .hr
 .parties
   -parties.each do |p|
-    =puts p.inspect
     %a.item{href:"#{url_for "/party/#{p.id}"}"}
       .title
         =p.title
       .donor
         =p.donor
+  -goods.each do |g|
+    %a.item{href:"#{url_for "/good/#{g.id}"}"}
+      .title
+        =g.title
+      .donor
+        =g.donor
 :javascript
   var container = document.querySelector('.parties');
   var msnry = new Masonry( container, {

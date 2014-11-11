@@ -1,0 +1,18 @@
+.title
+  =party.title
+.donor
+  =party.donor
+.description
+  =party.description
+.price
+  =party.price
+.date
+  =party.date
+.location
+  =party.location
+.available
+  =party.slots - party.signups.size
+.signups
+  -party.signups.each do |signup|
+    .name
+      =signup.name
