@@ -1,3 +1,4 @@
+If you would like to purchase this item, enter your name and click 'Sign Up'. The cost of the item will be added to your bill and will be paid for at check-out on the night of the Auction. Please double check your calendars before purchasing a party, as we cannot refund payment for scheduling conflicts.
 %h1.text-center
   =good.title
 .text-center
@@ -10,23 +11,28 @@
       =good.description
 %h3.text-center
   =good.price
-%h3.text-center
-  Number Remaining: 
-  =good.slots - good.signups.size
-.row
-  .col-md-2
-  .col-md-8
-    %form{method: "POST", action:"#{url_for("/good/#{good.id}")}"}
-      .input-group.input-group-lg
-        %span.input-group-addon
-          Name
-        %input.form-control{type:"text", name:"name"}
-      .input-group.input-group-lg
-        %span.input-group-addon
-          Email
-        %input.form-control{type:"text", name:"email"}
-      .input-group.input-group-lg.text-center
-        %input.btn.btn-default.btn-lg{type:"Submit", value:"Sign Up"}
+-if good.slots - good.signups.size > 0
+  %h3.text-center
+    Number Remaining: 
+    =good.slots - good.signups.size
+  .row
+    .col-md-2
+    .col-md-8
+      %form{method: "POST", action:"#{url_for("/good/#{good.id}")}"}
+        .input-group.input-group-lg
+          %span.input-group-addon
+            Name
+          %input.form-control{type:"text", name:"name"}
+        .input-group.input-group-lg
+          %span.input-group-addon
+            Email
+          %input.form-control{type:"text", name:"email"}
+        .input-group.input-group-lg.text-center
+          %input.btn.btn-default.btn-lg{type:"Submit", value:"Sign Up"}
+-else
+  .full
+    %h3.text-center
+      This item is no longer available
 -if good.signups.size > 0
   %h2.text-center
     Current Signups
@@ -35,4 +41,4 @@
     .col-md-4
       -good.signups.each do |signup|
         %h4
-          =signup.name
+          =h signup.name
