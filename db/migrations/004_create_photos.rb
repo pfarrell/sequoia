@@ -4,7 +4,7 @@ Sequel.migration do
       primary_key :id
       String :name
       String :email
-      Fixnum :slot_id
+      Fixnum :slot
     end
   end
 end

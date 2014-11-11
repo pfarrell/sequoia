@@ -1,48 +1,283 @@
 If you would like to purchase this item, enter your name and click 'Sign Up'. The cost of the item will be added to your bill and will be paid for at check-out on the night of the Auction. Please double check your calendars before purchasing a party, as we cannot refund payment for scheduling conflicts.
 %h1.text-center
-  =party.title
+  Family Portrait Day Sign-Up Sheet
 .text-center
   %em
-    =party.donor
+    Hayley Wrubel (Naomi) &amp; Kenneth Khouri (Connor).
 .row
   .col-md-2
   .col-md-8
     %blockquote
-      =party.description
+      %p
+        Remember just how hard it was to find a recent family portrait for the family bulletin board at the beginning of the school year?  Let’s take care of that! We’ll have two skilled photographers to make you say cheese: Sequoia photographer and Naomi’s Mommy, Hayley Wrubel, and avid photographer and Connor's Daddy, Kenneth Khouri.
+      %p
+        Hayley and Kenneth will each give you a 10 minute family portrait sitting, for a total of 20 minutes. The lovely foliage at Lake Temescal will be your background. Your photos will be uploaded to smugmug for you to print or order.
 %h4.text-center
-  =party.date
+  Saturday May 2, 2015
 %h4.text-center
-  =party.location
+  Lake Temescal, South Entrance, 6500 Broadway Terrace, Oakland, CA 94618
 %h3.text-center
-  =party.price
--if party.slots - party.signups.size > 0
-  %h3.text-center
-    Spaces Remaining: 
-    =party.slots - party.signups.size
+  $30/family
+%table.table
+  %thead
+    %th{style:"min-width:100px;"}
+      Time Slot
+      
+   
+  %tr
+    %td
+      %h5
+        10:00-10:20
+    %td
+      -p = photos.select{|p| p.slot == 1}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/1")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        10:10-10:30
+    %td
+      -p = photos.select{|p| p.slot == 2}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/2")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        10:20-10:40
+    %td
+      -p = photos.select{|p| p.slot == 3}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/3")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        10:30-10:50
+    %td
+      -p = photos.select{|p| p.slot == 4}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/4")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        10:40-11:00
+    %td
+      -p = photos.select{|p| p.slot == 5}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/5")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        10:50-11:10
+    %td
+      -p = photos.select{|p| p.slot == 6}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/6")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        11:00-11:20
+    %td
+      -p = photos.select{|p| p.slot == 7}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/7")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        11:10-11:30
+    %td
+      -p = photos.select{|p| p.slot == 8}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/8")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        11:20-11:40
+    %td
+      -p = photos.select{|p| p.slot == 9}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/9")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        11:30-11:50
+    %td
+      -p = photos.select{|p| p.slot == 10}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/10")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
+  %tr
+    %td
+      %h5
+        11:40-12:00
+    %td
+      -p = photos.select{|p| p.slot == 11}.first
+      -if p.nil?
+        %form{method: "POST", action:"#{url_for("/photo/11")}"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Name
+            %input.form-control{type:"text", name:"name"}
+          .input-group.input-group-md
+            %span.input-group-addon
+              Email
+            %input.form-control{type:"text", name:"email"}
+          .input-group.input-group-md.text-center
+            %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+      -else
+        %h3
+          =h p.name
   .row
-    .col-md-2
-    .col-md-8
-      %form{method: "POST", action:"#{url_for("/party/#{party.id}")}"}
-        .input-group.input-group-lg
-          %span.input-group-addon
-            Name
-          %input.form-control{type:"text", name:"name"}
-        .input-group.input-group-lg
-          %span.input-group-addon
-            Email
-          %input.form-control{type:"text", name:"email"}
-        .input-group.input-group-lg.text-center
-          %input.btn.btn-default.btn-lg{type:"Submit", value:"Sign Up"}
--else
+    %td
+      %h5
+        11:50-12:10
+    %td
+      .entry
+        -p = photos.select{|p| p.slot == 12}.first
+        -if p.nil?
+          %form{method: "POST", action:"#{url_for("/photo/12")}"}
+            .input-group.input-group-md
+              %span.input-group-addon
+                Name
+              %input.form-control{type:"text", name:"name"}
+            .input-group.input-group-md
+              %span.input-group-addon
+                Email
+              %input.form-control{type:"text", name:"email"}
+            .input-group.input-group-md.text-center
+              %input.btn.btn-default.btn-md{type:"Submit", value:"Sign Up"}
+        -else
+          %h3
+            =h p.name
+-if photos.size >= 11
   .full
     %h3.text-center
       This item is now full.
--if party.signups.size > 0
-  %h2.text-center
-    Current Signups
-  .row
-    .col-md-4
-    .col-md-4
-      -party.signups.each do |signup|
-        %h4
-          =h signup.name

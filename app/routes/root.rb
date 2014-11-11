@@ -34,4 +34,18 @@ class App < Sinatra::Application
   get "/photo" do
     haml :photo, locals: {photos: Photo.all}
   end
+
+  post "/photo/:id" do
+    p = Photo.where(slot: params[:id].to_i).first
+    puts "hello #{p.inspect}"
+    if(p.nil?)
+      p = Photo.new
+      p.slot = params[:id].to_i
+      p.name = params[:name]
+      p.email = params[:email]
+      p.save
+    end
+    
+    haml :photo, locals: {photos: Photo.all}
+  end
 end
