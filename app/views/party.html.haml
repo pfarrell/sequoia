@@ -1,18 +1,42 @@
-.title
+%h1.text-center
   =party.title
-.donor
-  =party.donor
-.description
-  =party.description
-.price
-  =party.price
-.date
+.text-center
+  %em
+    =party.donor
+.row
+  .col-md-2
+  .col-md-8
+    %blockquote
+      =party.description
+%h4.text-center
   =party.date
-.location
+%h4.text-center
   =party.location
-.available
+%h3.text-center
+  =party.price
+%h3.text-center
+  Spaces Remaining: 
   =party.slots - party.signups.size
-.signups
-  -party.signups.each do |signup|
-    .name
-      =signup.name
+.row
+  .col-md-2
+  .col-md-8
+    %form{method: "POST", action:"#{url_for("/party/#{party.id}")}"}
+      .input-group.input-group-lg
+        %span.input-group-addon
+          Name
+        %input.form-control{type:"text", name:"name"}
+      .input-group.input-group-lg
+        %span.input-group-addon
+          Email
+        %input.form-control{type:"text", name:"email"}
+      .input-group.input-group-lg.text-center
+        %input.btn.btn-default.btn-lg{type:"Submit", value:"Sign Up"}
+-if party.signups.size > 0
+  %h2.text-center
+    Current Signups
+  .row
+    .col-md-4
+    .col-md-4
+      -party.signups.each do |signup|
+        %h4
+          =signup.name

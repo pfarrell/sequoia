@@ -1,14 +1,38 @@
-.title
+%h1.text-center
   =good.title
-.donor
-  =good.donor
-.description
-  =good.description
-.price
+.text-center
+  %em
+    =good.donor
+.row
+  .col-md-2
+  .col-md-8
+    %blockquote
+      =good.description
+%h3.text-center
   =good.price
-.available
+%h3.text-center
+  Number Remaining: 
   =good.slots - good.signups.size
-.signups
-  -good.signups.each do |signup|
-    .name
-      =signup.name
+.row
+  .col-md-2
+  .col-md-8
+    %form{method: "POST", action:"#{url_for("/good/#{good.id}")}"}
+      .input-group.input-group-lg
+        %span.input-group-addon
+          Name
+        %input.form-control{type:"text", name:"name"}
+      .input-group.input-group-lg
+        %span.input-group-addon
+          Email
+        %input.form-control{type:"text", name:"email"}
+      .input-group.input-group-lg.text-center
+        %input.btn.btn-default.btn-lg{type:"Submit", value:"Sign Up"}
+-if good.signups.size > 0
+  %h2.text-center
+    Current Signups
+  .row
+    .col-md-4
+    .col-md-4
+      -good.signups.each do |signup|
+        %h4
+          =signup.name
