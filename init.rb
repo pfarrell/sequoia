@@ -12,7 +12,7 @@ p.save
 
 p=Party.find_or_create(title:'Mommy and Me Necklace Party')
 p.donor='King Family (Gavin)'
-p.description='Come make real beaded necklaces as mom and child. Make matching ones or individual styles. Heather King will provide the instruction, the beads and all the supplies.  Check out silent auction item xXX for an example of what we can make! Light snack provided. Pricing is per mom+child pair.'
+p.description='Come make real beaded necklaces as mom and child. Make matching ones or individual styles. Heather King will provide the instruction, the beads and all the supplies.  Light snack provided. Pricing is per mom+child pair.'
 p.price='$40/mom+child pair'
 p.date='Sunday, January 18, 10-11:30am'
 p.location='The King Home, Oakland'
