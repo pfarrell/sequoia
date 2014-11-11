@@ -44,7 +44,7 @@
       Hayley Wrubel (Naomi) &amp; Kenneth Khouri (Connor)
     .remain
       (
-      =11 - photos.size
+      =12 - photos.size
       remaining)
   -parties.each do |p|
     %a.item{href:"#{url_for "/party/#{p.id}"}", class: ('full' if p.slots - p.signups.size == 0)}
