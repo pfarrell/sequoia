@@ -1,6 +1,6 @@
 class App < Sinatra::Application
   get "/" do
-    haml :index, locals: {parties: Party.all, goods: Good.all}
+    haml :index, locals: {parties: Party.all, goods: Good.all, photos: Photo.all} 
   end
 
   get "/party/:id" do
@@ -29,5 +29,9 @@ class App < Sinatra::Application
     s.good = g
     s.save
     haml :good, locals: {good: Good[params[:id].to_i]}
+  end
+
+  get "/photo" do
+    haml :photo, locals: {photos: Photo.all}
   end
 end

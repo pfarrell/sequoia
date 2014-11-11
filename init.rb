@@ -10,9 +10,18 @@ p.minimum_guests=2
 p.slots=6
 p.save
 
+p=Photo.find_or_create(title:'Family Portrait Day'
+p.donor='Hayley Wrubel (Naomi) & Kenneth Khouri (Connor)'
+p.description='<p>Remember just how hard it was to find a recent family portrait for the family bulletin board at the beginning of the school year?  Let’s take care of that! We’ll have two skilled photographers to make you say cheese: Sequoia photographer and Naomi’s Mommy, Hayley Wrubel, and avid photographer and Connor\'s Daddy, Kenneth Khouri.</p><p>Hayley and Kenneth will each give you a 10 minute family portrait sitting, for a total of 20 minutes. The lovely foliage at Lake Temescal will be your background. Your photos will be uploaded to smugmug for you to print or order.</p>'  
+p.price='$30/family'
+p.date='Sunday, December 21, 2014, 1-3pm'
+p.location='Lake Temescal, South Entrance, 6500 Broadway Terrace, Oakland, CA 94618'
+p.slots=12
+p.save
+
 p=Party.find_or_create(title:'Mommy and Me Necklace Party')
 p.donor='King Family (Gavin)'
-p.description='Come make real beaded necklaces as mom and child. Make matching ones or individual styles. Heather King will provide the instruction, the beads and all the supplies.  Light snack provided. Pricing is per mom+child pair.'
+p.description='Come make real beaded necklaces as mom and child. Make matching ones or individual styles. Heather King will provide the instruction, the beads and all the supplies.  Check out silent auction item #820 for an example of what we can make!  Light snack provided. Pricing is per mom+child pair.'
 p.price='$40/mom+child pair'
 p.date='Sunday, January 18, 10-11:30am'
 p.location='The King Home, Oakland'

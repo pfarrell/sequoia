@@ -12,7 +12,11 @@
   background-color: #E3E3E3;
 }
 
-.item .donor {
+.full {
+  background-color: #FF9999;
+}
+
+.donor {
   margin-top:5px;
   font-style:italic;
 }

@@ -9,3 +9,4 @@ DB.sql_log_level = :debug
 require 'models/party'
 require 'models/signup'
 require 'models/good'
+require 'models/photo'
