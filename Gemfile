@@ -8,6 +8,9 @@ gem 'sinatra-contrib'
 gem 'emk-sinatra-url-for'
 gem 'sinatra-respond_to'
 
+gem 'sequel'
+gem 'pg'
+
 gem 'haml'
 
 gem 'capistrano', '~> 3.2.0'

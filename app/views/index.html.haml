@@ -1,13 +1,19 @@
 %h1
-  =msg
+  Sequioa Nursery School Annual Auction
   %small
-    Welcome to the TerrorDome
+    Up, Up, and Away!
 .hr
-  %form{role: "form"}
-    .form-group
-      %label{for: "name"}
-        Name
-      %input.form-control{type: "text", name:"name", placeholder:"Enter your name"}
-    %button.btn.btn-default{type:"submit"}
-      Submit
+.parties
+  -parties.each do |p|
+    %a.item{href:"#{url_for "/party/#{p.id}"}"}
+      .title
+        =p.title
+      .donor
+        =p.donor
 :javascript
+  var container = document.querySelector('.parties');
+  var msnry = new Masonry( container, {
+    // options
+    columnWidth: 250,
+    itemSelector: '.item'
+  });

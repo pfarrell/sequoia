@@ -1,0 +1,17 @@
+.item {
+  padding: 20px;
+  border: solid 1px black;
+  width: 240px;
+  text-align: center;
+  border-radius:5px;
+  min-height: 90px;
+}
+
+.item:hover {
+  background-color: #E3E3E3;
+}
+
+.item .donor {
+  margin-top:5px;
+  font-style:italic;
+}
