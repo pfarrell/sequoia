@@ -5,6 +5,7 @@
 .hr
 .parties
   -parties.each do |p|
+    =puts p.inspect
     %a.item{href:"#{url_for "/party/#{p.id}"}"}
       .title
         =p.title
