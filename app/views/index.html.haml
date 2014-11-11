@@ -47,7 +47,7 @@
       =12 - photos.size
       remaining)
   -parties.each do |p|
-    %a.item{href:"#{url_for "/party/#{p.id}"}", class: ('full' if p.slots - p.signups.size == 0)}
+    %a.item{href:"#{url_for "/party/#{p.id}"}", class: ('full' if p.slots - p.signups.size <= 0)}
       .title
         =p.title
       .donor
@@ -57,7 +57,7 @@
         =p.slots - p.signups.size
         remaining)
   -goods.each do |g|
-    %a.item{href:"#{url_for "/good/#{g.id}"}", class: ('full' if g.slots - g.signups.size == 0)}
+    %a.item{href:"#{url_for "/good/#{g.id}"}", class: ('full' if g.slots - g.signups.size <= 0)}
       .title
         =g.title
       .donor
