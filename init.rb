@@ -161,7 +161,7 @@ g=Good.find_or_create(title:'Recipe Book')
 g.donor='Catalino Family (Lucia)'
 g.description='The Sequoia Family Cookbook is filled with a bounty of recipes that are made with love by our own Sequoia Families. From Breakfast Oatmeal Cupcakes to Cuban "Ropa Vieja", you\'re sure to find a number of dishes for the whole family to enjoy. There is no doubt that you and your children will treasure this little handmade memento for years to come. '
 g.price='$15'
-p.slots=29
+g.slots=29
 g.save
 
 g=Good.find_or_create(title: 'Sequoia\'s Greatest Hits CD')
