@@ -12,6 +12,12 @@ class App < Sinatra::Application
 #  helpers Sinatra::Cookies
   register Sinatra::RespondTo
 
+  helpers do
+    include Haml::Helpers
+    alias_method :h, :html_escape
+  end
+
+
   enable :sessions
   set :session_secret, ENV["APP_SESSION_SECRET"] || "youshouldreallychangethis"
   set :views, Proc.new { File.join(root, "app/views") }
