@@ -18,6 +18,10 @@ If you would like to purchase this item, enter your name and click 'Sign Up'. Th
   Lake Temescal, South Entrance, 6500 Broadway Terrace, Oakland, CA 94618
 %h3.text-center
   $30/family
+-if photos.size > 11
+  .full
+    %h3.text-center
+      This item is now full.
 %table.table
   %thead
     %th{style:"min-width:100px;"}
@@ -275,7 +279,3 @@ If you would like to purchase this item, enter your name and click 'Sign Up'. Th
         -else
           %h3
             =h p.name
--if photos.size > 11
-  .full
-    %h3.text-center
-      This item is now full.
