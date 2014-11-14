@@ -4,67 +4,13 @@
     Up, Up, and Away!
 .hr
 %p.lead
-  Welcome to the online sign-up sheets for the famous Sequoia Community Parties and the fabulous Sequoia Community fixed- price Goods and Services! 
-.text-center
-  %p.block
-    This website will be active starting at 
-    %strong
-      %em
-        4pm on Tuesday, November 11th 
-    and will close at 
-    %strong
-      %em
-        10pm on Thursday, November 13th. 
-.container
-  .row
-    .col-md-6
-      %p.block
-        Click on a title below to see a full description of the item, its cost, and its scheduled date and time. If you decide to purchase the item, enter your name, email and click 'Sign Up'. The cost of the item will be added to your bill and will be paid for at check-out on the night of the Auction. 
-    .col-md-6
-      %p.block
-        Please double check your calendars before purchasing a party, as we cannot refund payment for scheduling conflicts. 
-  .row
-    .col-md-6
-      %p.block
-        Any items that still have open slots will be posted and available for purchase on the night of the Auction. Some parties will sell out before the Auction though, so make sure you don't miss out!
-    .col-md-6
-      %p.block
-        Please contact Amanda with any questions via
-        %a{href: 'mailto:amanda.m.okamoto@gmail?subject=Question about the Sequoia Auction'}
-          email <amanda.m.okamoto@gmail>
-        or phone 
-        %strong
-          510-693-9544
-.hr
-.parties
-  %a.item{href:"#{url_for "/photo"}", class: ('full' if photos.size > 11 )}
-    .title
-      Family Portrait Day Sign-Up Sheet
-    .donor
-      Hayley Wrubel (Naomi) &amp; Kenneth Khouri (Connor)
-    .remain
-      (#{12 - photos.size} remaining)
-  -parties.each do |p|
-    %a.item{href:"#{url_for "/party/#{p.id}"}", class: ('full' if p.slots - p.signups.size <= 0)}
-      .title
-        =p.title
-      .donor
-        =p.donor
-      .remain
-        (#{p.slots - p.signups.size} remaining)
-  -goods.each do |g|
-    %a.item{href:"#{url_for "/good/#{g.id}"}", class: ('full' if g.slots - g.signups.size <= 0)}
-      .title
-        =g.title
-      .donor
-        =g.donor
-      -unless g.slots.nil?
-        .remain
-          (#{g.slots - g.signups.size} remaining)
-:javascript
-  var container = document.querySelector('.parties');
-  var msnry = new Masonry( container, {
-    // options
-    columnWidth: 250,
-    itemSelector: '.item'
-  });
+  Online Signups are now closed
+  %br
+  See you Saturday Night!!
+%p.block
+  Please contact Amanda with any questions via
+  %a{href: 'mailto:amanda.m.okamoto@gmail?subject=Question about the Sequoia Auction'}
+    email <amanda.m.okamoto@gmail>
+  or phone 
+  %strong
+    510-693-9544
