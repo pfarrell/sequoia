@@ -10,7 +10,6 @@ require 'haml'
 class App < Sinatra::Application
   helpers Sinatra::UrlForHelper
 #  helpers Sinatra::Cookies
-  register Sinatra::RespondTo
 
   helpers do
     include Haml::Helpers
